@@ -13,6 +13,7 @@ public class Category implements Serializable {
     private Long id;
     private String name;
 
+    @JsonIgnore
     private List<Product> products = new ArrayList<>();
 
     public Category() {}
@@ -38,7 +39,6 @@ public class Category implements Serializable {
         this.name = name;
     }
 
-    @JsonIgnore
     public List<Product> getProducts() {
         return products;
     }
